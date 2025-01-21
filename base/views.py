@@ -45,11 +45,11 @@ rooms = [
     
 # This is the view function that will be called when the user visits the home page [1]
 def home(request):
-    contex = {'rooms': rooms}
-    return render(request, 'home.html')
+    context = {'rooms': rooms}
+    return render(request, 'base/home.html', context)
 
 def room(request):
-    return render(request, 'room.html')
+    return render(request, 'base/room.html')
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'base/about.html')
