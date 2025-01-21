@@ -8,13 +8,14 @@
     <h2>Rooms</h2>
     <div>
         {% for room in rooms%}
-          <div>
-            <h5>
-                {{room.id}} -- {{room.title}} -- Price -- {{room.price}} -- Rating -- {{room.rating}} -- Description -- {{room.description}}
+        <div>
+             <h5>
+                 {{room.id}} -- <a href="/room/{{room.id}}">{{room.title}} -- Price -- {{room.price}} -- Rating -- {{room.rating}} -- Description --
+                {{room.description}}</a>
             </h5>
-          </div>
+        </div>
         {% endfor %}
     </div>
 
-{% endblock content %}
+    {% endblock content %}
 </div>
